@@ -2,7 +2,7 @@ import React from 'react';
 const Service = ()=>(
   <div class="content">
     <h2>Service</h2>
-    <p>This is about</p>
+    
     <div class="content-wrap">
 	    <div className="content-col">
 			<p>Lorem ipsum dolor sit amet, cum ne dicta regione, quodsi repudiandae at est, apeirian sapientem periculis est ea. Ius an commodo oporteat intellegat. Ei ius veritus ceteros, saepe urbanitas ea per. Velit conceptam vel ei, vim cu moderatius honestatis. Te quod atqui pri, est ea etiam mentitum, numquam praesent id pri. Meis iriure pertinax sit in, ut est dicam voluptatum. Ipsum tempor similique vix at, nec appellantur neglegentur ut.</p>
