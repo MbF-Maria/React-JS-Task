@@ -1,44 +1,13 @@
 .App {
   text-align: center;
-  background-image: url("img/homescreen.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #fff;
-  height: 950px;
-  display: table; 
   width: 100%;
 }
 
-h1,h2{
-  color: #00d8ff;
-}
-a,p{
-  color: #333;
-}
-h1{
-  font-size: 40px;
-  line-height: 46px;
-}
 h2{
+  color: #333;
   font-size: 30px;
-  line-height: 36px;
-}
-ul{
-  padding-left: 0px;
-}
-li{
-  display: inline-block;
-  list-style: none;
-  margin-right: 10px;
-  text-align: center;
-}
-a{
-  text-decoration: none;
-}
-
-a:hover{
-  color:#00d8ff;
+  line-height: 35px;
 }
 
 .App-logo {
@@ -51,14 +20,6 @@ a:hover{
   padding-bottom: 60px;
 }
 
-.App-homescreen{
-  background-color: #fff;
-  width: 400px;
-  margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
 .App-intro {
   color: #303030;
   font-size: 16px;
@@ -66,11 +27,6 @@ a:hover{
   margin-bottom: 35px;
 }
 
-.content{
-  background-color: #C0EDF5;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 .forgotten{
   border-bottom: 1px dotted #000;
   color: #333;
