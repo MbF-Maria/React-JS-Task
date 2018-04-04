@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+  background-image: url("img/homescreen.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 950px;
+  display: table; 
+  width: 100%;
+}
+
+h1,h2{
+  color: #00d8ff;
+}
+a,p{
+  color: #333;
+}
+h1{
+  font-size: 40px;
+  line-height: 46px;
+}
+h2{
+  font-size: 30px;
+  line-height: 36px;
+}
+ul{
+  padding-left: 0px;
+}
+li{
+  display: inline-block;
+  list-style: none;
+  margin-right: 10px;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color:#00d8ff;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  color: white;
+  padding-bottom: 60px;
+}
+
+.App-homescreen{
+  background-color: #fff;
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.App-intro {
+  color: #303030;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 35px;
+}
+
+.content{
+  background-color: #C0EDF5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.forgotten{
+  border-bottom: 1px dotted #000;
+  color: #333;
+  text-decoration: none;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

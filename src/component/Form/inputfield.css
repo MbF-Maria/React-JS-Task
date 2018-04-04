@@ -1,0 +1,29 @@
+input[type],input[type]:focus{
+	outline: none;
+}
+input[type] {
+	border:0;
+	border-bottom: 1px solid #b0b0b0;
+	display: inline-block;
+	margin-bottom: 20px;
+    min-height: 25px;
+	padding: 10px 15px;
+	width: 500px;
+}
+input[type]:focus{
+	outline: none;
+}
+
+label{
+	background-color: white;
+	color: white;
+	display: block;
+	margin-bottom: 20px;
+}
+input[type]:focus ~ label{
+	background-color: white;
+	display: block;
+	color:red;
+	font-size:14px;
+
+}	

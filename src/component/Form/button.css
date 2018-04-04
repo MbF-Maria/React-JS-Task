@@ -1,0 +1,20 @@
+.btn { 
+   background-color: transparent;
+   border: 2px solid #625F5E;
+   color: #333;
+   cursor: pointer;
+   display:inline-block;
+   letter-spacing:1px;
+   min-width: 200px;
+   padding: 10px 0px;
+   text-align: center;
+   transition: all 0.6s ease-in-out;
+}
+.btn:hover,.btn:active,.btn:focus{
+	outline: none;
+}
+.btn:hover{
+   color: #fff;
+	border: 2px solid #fff;
+	transition: all 0.6s ease-in-out;
+}
