@@ -1,48 +1,61 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { createStore } from 'redux';
 
-function rootReducer(state = {}, action){
-  switch(action.type) {
-    case 'ADD-ONE':
-     return state.concat('added one')
-    case 'SUBTRACT-ONE':
-      return state.concat('subtracted one')
-    default:
-      return state
-  }
-}
+// import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { updateUser,apiRequest } from './actions/user-action';
 
-let store = createStore(rootReducer);
+import { createSelector } from 'reselect';
 
 class App extends Component {
-
-  constructor(){
-    super()
-    store.subscribe(() => {
-      console.log('subscribing to store');
-      console.log(store.getState())
-    });
+  constructor(props){
+    super(props);
+    this.onUpdateUser = this.onUpdateUser.bind(this);
   }
 
-  increment() {
-    console.log('in store increment method');
-    store.dispatch({type:'INCREMENT', data:'added one'});
+  onUpdateUser() {
+    this.props.onUpdateUser(event.target.value);
   }
 
   render(){
+    console.log(this.props)
     return(
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <h1>simple redux</h1>
-        <button onClick={this.increment}>Increment</button>
-        <button onClick={this.decrement}>Decrement</button>
+        <h1>simple redux Setup</h1>
+        <input onChange={this.onUpdateUser} />
+        {this.props.user}
       </div>
     );
   }
 }
 
-export default App;
+const productsSelector = createSelector(
+  state => state.products,
+  products => products
+);
+
+const userSelector = createSelector(
+  state => state.user,
+  user => user
+);
+
+const mapStateToProps = createSelector(
+  productsSelector,
+  userSelector,
+  (products,user) => ({
+    products,
+    user
+  })
+);
+
+const mapActionToProps = {
+    onUpdateUser: updateUser,
+    onApiRequest: apiRequest
+};
+
+
+export default connect(mapStateToProps,mapActionToProps)(App);

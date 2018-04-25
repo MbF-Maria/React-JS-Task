@@ -10,15 +10,18 @@
   width: 100%;
 }
 
-h1,h2{
+/*h1,h2{
   color: #00d8ff;
+}*/
+h1{
+  color:#fff;
 }
 a,p{
   color:#fff;
 }
 h1{
-  font-size: 40px;
-  line-height: 46px;
+  font-size: 48px;
+  line-height: 54px;
 }
 h2{
   font-size: 30px;
