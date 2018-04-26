@@ -1,45 +1,39 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { createStore } from 'redux';
-
-function rootReducer(state = {}, action){
-  switch(action.type) {
-    case 'ADD-ONE':
-     return state.concat('added one')
-    case 'SUBTRACT-ONE':
-      return state.concat('subtracted one')
-    default:
-      return state
-  }
-}
-
-let store = createStore(rootReducer);
 
 class App extends Component {
-
-  constructor(){
-    super()
-    store.subscribe(() => {
-      console.log('subscribing to store');
-      console.log(store.getState())
-    });
+  constructor(props){
+    super(props)
+    this.state = { 
+      title: '',
+      body:'',
+      id:'',
+    };
   }
 
-  increment() {
-    console.log('in store increment method');
-    store.dispatch({type:'INCREMENT', data:'added one'});
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({title:data.title,body:data.body,id:data.id})
+        console.log(data)
+      });
   }
 
-  render(){
-    return(
+  render() {
+    const { title,body,id } = this.state;
+    return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <h1>simple redux</h1>
-        <button onClick={this.increment}>Increment</button>
-        <button onClick={this.decrement}>Decrement</button>
+        <div className="App-homescreen">
+          <h1> Title : {title}</h1>
+          <p>Subject : {body}</p>
+          <p>Id : {id}</p>
+        </div>
       </div>
     );
   }
